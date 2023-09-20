@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(241, 230, 215);
+    text-align: center;
+}
+
+#navegacao {
+    text-align: right;
+    font-size: large;
+    margin-right: 60px;
+}
+
+a {
+    color: rgb(74, 74, 238);
+}
+
+.pontos-turisticos {
+    text-align: center;
+}
+
+footer {
+    margin-top: 45px;
+    text-align: left; 
+    text-decoration: none;
+}

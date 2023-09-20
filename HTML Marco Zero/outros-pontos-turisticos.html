@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Outros pontos turísticos</title>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">Início </a></li>
-            <a href="outros-pontos-turisticos.html">Outros pontos turísticos </a></li>
-            <a href="">Criar conta </a></li>
+        <nav id="navegacao">
+            <a href="index.html">Início |</a></li>
+            <a href="outros-pontos-turisticos.html">Outros pontos turísticos |</a></li>
+            <a href="">Criar conta |</a></li>
             <a href="">Login </a></li>
         </nav>
     </header>
@@ -18,16 +19,21 @@
         <h1>Outros pontos turísticos - Recife antigo.</h1>
         <p>A parte antiga da cidade parece ter parado no século passado, uma mistura de cores coloniais e edifícios históricos que dão uma ideia da história desta cidade e do Brasil todo.</p>
     </main>
-    <secion>
-        <h3>Parque das Esculturas</h3>
-        <img src="./img/parque-esculturas.jpeg" alt="Parque das Esculturas" width="35%">
-        <p>Uma instalação a céu aberto sobre o molhe do porto, composta por 90 obras do artista plástico Francisco Brennand, inaugurada em comemoração aos 500 anos do Descobrimento do Brasil. Dentre as esculturas, o destaque vai para a imponente Coluna de Cristal, que não passa despercebida com seus 32 metros de altura.</p>
-    </secion>
-    <section>
-        <h3>Embaixada de Pernambuco – Bonecos Gigantes de Olinda</h3>
-        <img src="./img/bonecosolinda.jpg" alt="Bonecos de Olinda" width="35%">
-        <p>Na Embaixada dos Bonecos estão reunidos 63 dentre os mais de 300 existentes. Você vai encontrar Alceu Valença, Michael Jackson, Ayrton Senna, Tim Maia, Pelé, Neymar e muitas outras personalidades do esporte, música e política. A visita é monitorada por um guia e é possível chegar pertinho das peças, se caracterizar com adereços e tirar fotos bem divertidas.</p>
-    </section>
+    <div class="pontos-turisticos">
+        <section>
+            <h3>Parque das Esculturas</h3>
+            <img src="./img/parque-esculturas.jpeg" alt="Parque das Esculturas" width="35%">
+            <p>Uma instalação a céu aberto sobre o molhe do porto, composta por 90 obras do artista plástico Francisco Brennand, inaugurada em comemoração aos 500 anos do Descobrimento do Brasil. </p>
+            <p>Dentre as esculturas, o destaque vai para a imponente Coluna de Cristal, que não passa despercebida com seus 32 metros de altura.</p>
+        </secion>
+        <section class="pontos-turisticos">
+            <h3>Embaixada de Pernambuco – Bonecos Gigantes de Olinda</h3>
+            <img src="./img/bonecosolinda.jpg" alt="Bonecos de Olinda" width="35%">
+            <p>Na Embaixada dos Bonecos estão reunidos 63 dentre os mais de 300 existentes. </p>
+            <p>Você vai encontrar Alceu Valença, Michael Jackson, Ayrton Senna, Tim Maia, Pelé, Neymar e muitas outras personalidades do esporte, música e política. </p>
+            <p>A visita é monitorada por um guia e é possível chegar pertinho das peças, se caracterizar com adereços e tirar fotos bem divertidas.</p>
+        </section>
+    </div>
     <footer>
         <span>Contato:</span>
         <ul>
