@@ -47,19 +47,16 @@ VALUES
 SELECT * from vendas
 
 ---------- CRIANDO FUNÇÃO -----------
-CREATE OR REPLACE FUNCTION quant_produtos_dia()
-RETURNS TABLE (data_venda DATE, total_vendido INT) AS
-$$
+CREATE OR REPLACE FUNCTION contar_clientes_por_dia()
+RETURNS TABLE(data_venda DATE, total_clientes BIGINT) AS $$
 BEGIN
     RETURN QUERY
-    SELECT data_venda, SUM(quantidade) AS total_vendido
-    FROM vendas
-    GROUP BY data_venda
-    ORDER BY data_venda;
+    SELECT v.data_venda, COUNT(DISTINCT v.nome_comprador) AS total_clientes
+    FROM vendas v
+    GROUP BY v.data_venda
+    ORDER BY v.data_venda;
 END;
-$$
-LANGUAGE PLPGSQL;
+$$ LANGUAGE plpgsql;
 
-CALL quant_produtos_dia()
-
+SELECT * FROM contar_clientes_por_dia()
 
