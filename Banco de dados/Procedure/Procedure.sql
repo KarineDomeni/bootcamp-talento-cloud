@@ -47,19 +47,19 @@ VALUES
 SELECT * from vendas
 
 ---------- CRIANDO PROCEDURE -----------
-CREATE OR REPLACE FUNCTION quant_produtos_dia()
-RETURNS TABLE (data_venda DATE, total_vendido INT) AS
-$$
+CREATE OR REPLACE PROCEDURE quant_produtos_dia()
+AS $$
 BEGIN
-    RETURN QUERY
+    CREATE TEMPORARY TABLE temp_total_vendido AS
     SELECT data_venda, SUM(quantidade) AS total_vendido
     FROM vendas
     GROUP BY data_venda
     ORDER BY data_venda;
-END;
-$$
-LANGUAGE PLPGSQL;
 
-CALL quant_produtos_dia()
+    SELECT * FROM temp_total_vendido;
+    
+    DROP TABLE IF EXISTS temp_total_vendido;
+END;
+$$ LANGUAGE PLPGSQL;
 
 
